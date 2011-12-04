@@ -17,7 +17,6 @@ Gem::Specification.new do |gem|
   
   gem.add_development_dependency "rspec", "~> 2.7"
   gem.add_dependency "mongo_mapper", "~> 0.10.1"
-  gem.add_dependency "bson_ext"#, "~> 1.5.0"
-  gem.add_dependency "activesupport", "~> 3.1.0"
+  gem.add_dependency "bson_ext", "~> 1.5.0"
   
 end

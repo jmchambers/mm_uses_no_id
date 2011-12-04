@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["j.chambers@gmx.net"]
   gem.description   = %q{MongoMapper plugin that removes ID field from EmbeddedDocuments}
   gem.summary       = %q{id-less embedded docs for MM}
-  gem.homepage      = ''
+  gem.homepage      = 'https://github.com/jmchambers/mm_uses_no_id'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

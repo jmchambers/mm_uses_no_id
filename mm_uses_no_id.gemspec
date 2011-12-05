@@ -14,7 +14,8 @@ Gem::Specification.new do |gem|
   gem.name          = "mm_uses_no_id"
   gem.require_paths = ['lib']
   gem.version       = MmUsesNoId::VERSION
-  
+  gem.license       = 'MIT'
+
   gem.add_development_dependency "rspec", "~> 2.7"
   gem.add_development_dependency "bson_ext", "~> 1.5.0"
   gem.add_dependency "mongo_mapper", "~> 0.10.1"

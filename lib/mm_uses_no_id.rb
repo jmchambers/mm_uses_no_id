@@ -13,7 +13,5 @@ module MmUsesNoId
 
   end
 
-  module InstanceMethods
 
-  end
 end

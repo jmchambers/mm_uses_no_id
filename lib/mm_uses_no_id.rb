@@ -13,8 +13,9 @@ module MmUsesNoId
 
   end
 
-  def ==(other)
+  def eql?(other)
     other.is_a?(self.class) && other.attributes == attributes
   end
-
+  alias :== :eql?
+  
 end

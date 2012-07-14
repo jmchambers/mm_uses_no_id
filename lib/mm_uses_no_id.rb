@@ -13,5 +13,8 @@ module MmUsesNoId
 
   end
 
+  def ==(other)
+    other.is_a?(self.class) && other.attributes == attributes
+  end
 
 end

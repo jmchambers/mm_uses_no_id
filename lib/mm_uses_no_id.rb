@@ -18,4 +18,24 @@ module MmUsesNoId
   end
   alias :== :eql?
   
+  def initialize_copy(other)
+    @_new       = true
+    @_destroyed = false
+    
+    begin
+      remove_instance_variable(:@_id)
+      remove_instance_variable(:@_id_before_type_cast)
+    rescue
+    end
+
+    associations.each do |name, association|
+      instance_variable_set(association.ivar, nil)
+    end
+    self.attributes = other.attributes.clone.except(:_id).inject({}) do |hash, entry|
+      key, value = entry
+      hash[key] = value.duplicable? ? value.clone : value
+      hash
+    end
+  end
+  
 end
